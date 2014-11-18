@@ -464,6 +464,7 @@
       $(".preloaded .sidebar-right").stick_in_parent();
       $( "#loadMore" ).click(function() {
           $("div.row.hide").removeClass("hide");
+          $("#loadMore").addClass("hide");
           $(".loaded .feed").stick_in_parent();
           $(".loaded .sidebar-left").stick_in_parent();
           $(".loaded .sidebar-right").stick_in_parent();
