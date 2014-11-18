@@ -459,16 +459,39 @@
   </div>
    
   <script>
-      $(".preloaded .feed").stick_in_parent();
-      $(".preloaded .sidebar-left").stick_in_parent();
-      $(".preloaded .sidebar-right").stick_in_parent();
+      $( document ).ready(function() {
+          $(".preloaded .feed").stick_in_parent();
+          $(".preloaded .sidebar-left").stick_in_parent();
+
+          //From https://github.com/leafo/sticky-kit/issues/31#issuecomment-51740033
+          //Fixes stickyness issue when new content added
+          $('.preloaded .sidebar-left')
+          .on('sticky_kit:bottom', function(e) {
+              $(this).parent().css('position', 'static');
+          })
+          .on('sticky_kit:unbottom', function(e) {
+              $(this).parent().css('position', 'relative');
+          })
+          $(".preloaded .sidebar-right").stick_in_parent();
+          $('.preloaded .sidebar-right')
+          .on('sticky_kit:bottom', function(e) {
+              $(this).parent().css('position', 'static');
+          })
+          .on('sticky_kit:unbottom', function(e) {
+              $(this).parent().css('position', 'relative');
+          })
+        });
       $( "#loadMore" ).click(function() {
           $("div.row.hide").removeClass("hide");
           $("#loadMore").addClass("hide");
+          $(document.body).trigger("sticky_kit:recalc");
           $(".loaded .feed").stick_in_parent();
           $(".loaded .sidebar-left").stick_in_parent();
           $(".loaded .sidebar-right").stick_in_parent();
         });
-  </script>
+    </script>
+    <style>
+        .feed,.sidebar-left,.sidebar-right { display:inline-block;}
+    </style>
     </body>
 </html>
