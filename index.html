@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/css/foundation.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"/>
+        <script src="https://rawgit.com/leafo/sticky-kit/v1.1.0/jquery.sticky-kit.min.js"/>
     </head>
     <body>
      
@@ -120,7 +122,7 @@
  
      
      
-    <aside class="large-3 columns hide-for-small">
+    <aside class="large-3 columns hide-for-small" id="sidebar">
       <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
       <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
     </aside>
@@ -150,6 +152,8 @@
       </div>
     </div>
   </footer>
-    
+  <script>
+      $("#sidebar").stick_in_parent();
+  </script>
     </body>
 </html>
