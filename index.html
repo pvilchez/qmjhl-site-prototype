@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/css/foundation.min.css">
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://rawgit.com/leafo/sticky-kit/v1.1.0/jquery.sticky-kit.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
     </head>
     <body>
 
@@ -243,11 +244,31 @@
 
     <aside class="large-3 columns hide-for-small sidebar-right">
       <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
-      <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
     </aside>
 
   </div>
 
+  <div class="loaded-ad row hide" style="margin-top:60px;">
+      <div class="large-12 columns">
+        <section id="slide-1" class="homeSlide">
+            <div class="bcg"
+                data-center="background-position: 50% 0px;"
+                data-top-bottom="background-position: 50% -100px;"
+                data-anchor-target="#slide-1"
+            >
+                <div class="hsContainer">
+                    <div class="hsContent"
+                        data-center="bottom: 200px; opacity: 1"
+                        data-top="bottom: 1200px; opacity: 0"
+                        data-anchor-target="#slide-1 h2"
+                    >
+                        <h2>Buy this car...</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+  </div>
 
    <div class="loaded row hide" style="margin-top:60px;">
 
@@ -448,7 +469,6 @@
 
     <aside class="large-3 columns hide-for-small sidebar-right">
       <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
-      <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
     </aside>
 
   </div>
@@ -479,7 +499,7 @@
           })
           .on('sticky_kit:unbottom', function(e) {
               $(this).parent().css('position', 'relative');
-          })
+          });
         });
       $( "#loadMore" ).click(function() {
           $("div.row.hide").removeClass("hide");
@@ -488,10 +508,46 @@
           $(".loaded .feed").stick_in_parent();
           $(".loaded .sidebar-left").stick_in_parent();
           $(".loaded .sidebar-right").stick_in_parent();
+            // Init Skrollr
+            var s = skrollr.init();
+            // Refresh Skrollr after resizing our sections
+            s.refresh($('.homeSlide'));
         });
     </script>
     <style>
         .feed,.sidebar-left,.sidebar-right { display:inline-block;}
+        .row {max-width:85%;}
+
+/* Slide 1 */
+#slide-1 { height:600px;}
+#slide-1 .bcg {
+    background-image:url("http://maxcdn.thedesigninspiration.com/wp-content/uploads/2012/11/Wallpaper-l-040.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+}
+#slide-1 .hsContent {
+    bottom: 200px;
+    top: auto;
+}
+.hsContent {
+    max-width: 700px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+    .hsContent h2  {
+        color: #fff8de;
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px 5px;
+        font-size: 35px;
+        line-height: 38px;
+        margin-bottom: 12px;
+    }
     </style>
     </body>
 </html>
