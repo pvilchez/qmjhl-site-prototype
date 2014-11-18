@@ -79,7 +79,8 @@
 
     <div class="large-6 columns">
 
-        <div class="row card">
+        <!-- news w/pic -->
+        <div class="row">
             <div class="large-7 columns">
                 <h6>by Charles Whitacker</h6>
                 <h3>Gluten-free Shored</h3>
@@ -88,6 +89,16 @@
                 <a class="button tiny">Ipsum</a>
             </div>
             <div class="large-5 columns"><img src="http://placehold.it/800x450&text=[16x9 img]"/></div>
+        </div>
+
+        <!-- news - no pic -->
+        <div class="row">
+            <div class="panel">
+                <h6>by Charles Whitacker</h6>
+                <h3>Gluten-free Shored</h3>
+                <p>listicle, biodiesel you probably ssn't longer type can fit blah bla test test</p>
+                <a class="button tiny">Lorem</a>
+            </div>
         </div>
 
 
@@ -138,8 +149,9 @@
       $("#sidebar_right").stick_in_parent();
   </script>
   <style>
-      .card {
+      .row.card {
           border: 1px solid #d8d8d8;
+          margin-bottom: 20px;
       }
   </style>
     </body>
