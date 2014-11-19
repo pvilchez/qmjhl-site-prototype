@@ -265,6 +265,10 @@
                 // Refresh Skrollr after resizing our sections
                 s.refresh($('.homeSlide'));
             });
+            //hack todo fixme gross
+            $(window).scroll(function(){
+                $(document.body).trigger("sticky_kit:recalc");
+            });
         </script>
         <style>
             .feed,.sidebar-left,.sidebar-right { display:inline-block;}
