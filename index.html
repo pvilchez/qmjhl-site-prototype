@@ -8,17 +8,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/css/foundation.min.css">
+        <link rel="stylesheet" href="css/snap.css">
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://rawgit.com/leafo/sticky-kit/v1.1.0/jquery.sticky-kit.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/snap.js/1.9.2/snap.min.js"></script>
+
     </head>
     <body>
-
+<div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-left">
+                <div>
+                      <a href="#"><img src="mockup-images/nav-q-logo.png"></a>
+                    <div class="demo-social">
+                    </div>
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Calendrier</a></li>
+                        <li><a href="#">Résultats</a></li>
+                        <li><a href="#">Classements</a></li>
+                        <li><a href="#">Meneurs</a></li>
+                        <li><a href="#">Statistiques</a></li>
+                        <li><a href="#">Équipes</a></li>
+                    </ul>
+                    <div>
+                        <br/>
+                        <p>Copyright 2014. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non erat ac leo ultrices blandit sed vel risus. Pellentesque facilisis blandit auctor. Maecenas vestibulum vulputate tincidunt. Mauris nec quam libero. Fusce eget ligula non leo varius condimentum quis ac elit. Donec id urna ut neque semper ultrices. Proin ut suscipit felis. Nullam neque felis, ullamcorper scelerisque volutpat vel, vehicula vehicula neque. Aenean scelerisque elit ac erat sagittis ullamcorper.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="snap-drawer snap-drawer-right"></div>
+        </div>
+<div class="snap-content" id="content">
     <div class="fixed">
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="menu"style="height:55px;margin:0 5px;">
-        <a href="#"><img src="mockup-images/nav-hamurger.png" style="max-height:55px;"></a>
+        <a id="hamburger" href="#"><img src="mockup-images/nav-hamurger.png" style="max-height:55px;"></a>
         </li>
       </ul>
 
@@ -32,8 +58,7 @@
       </section>
     </nav>
     </div>
-
-        <div class="preloaded row" style="margin-top:60px;">
+        <div class="preloaded row" style="padding-top:55px;">
             <div class="row">
                 <p><img src="mockup-images/wide-ad970x90.png" style="display:block;margin:0 auto;"/></p>
             </div>
@@ -114,7 +139,7 @@
 
         </div>
 
-        <div class="loaded-ad row hide" style="margin-top:60px;width:100%;">
+        <div class="loaded-ad row hide" style="padding-top:55px;width:100%;">
             <div class="large-12 columns">
                 <section id="slide-1" class="homeSlide">
                 <div class="bcg"
@@ -136,7 +161,7 @@
             </div>
         </div>
 
-        <div class="loaded row hide" style="margin-top:60px;">
+        <div class="loaded row hide" style="padding-top:55px;">
 
 
             <div class="large-3 columns sidebar-left">
@@ -227,14 +252,14 @@
         </div>
         <div class="row">
             <div class="large-12 columns">
-                <a class="button expand" id="loadMore" style="margin-top:10px;">LOAD MORE</a>
+                <a class="button expand" id="loadMore" style="padding-top:10px;">LOAD MORE</a>
             </div>
         </div>
-
+</div>
         <script>
             $( document ).ready(function() {
                 $(".preloaded .sidebar-left, .preloaded .sidebar-right").stick_in_parent({
-                    offset_top: $('.top-bar').height()
+                    parent: $(".preloaded.row")
                 });
 
                 //From https://github.com/leafo/sticky-kit/issues/31#issuecomment-51740033
@@ -247,25 +272,34 @@
                     $(this).parent().css('position', 'relative');
                 });
             });
+var snapper = new Snap({
+  element: document.getElementById('content')
+});
+            $("#hamburger").click(function(){
+                if( snapper.state().state=="left" ){
+                    snapper.close();
+                } else {
+                    snapper.open('left');
+                }
+            });
             $( "#loadMore" ).click(function() {
                 $("div.row.hide").removeClass("hide");
                 $("#loadMore").addClass("hide");
                 $(document.body).trigger("sticky_kit:recalc");
-                $(".loaded .sidebar-left").stick_in_parent();
-                $(".loaded .sidebar-right").stick_in_parent();
+                $(".loaded .sidebar-left, .loaded .sidebar-right").stick_in_parent({parent: $("preloaded")});
                 // Init Skrollr
                 var s = skrollr.init();
                 // Refresh Skrollr after resizing our sections
                 s.refresh($('.homeSlide'));
             });
             //hack todo fixme gross
-            $(window).scroll(function(){
+            $("#content").scroll(function(){
                 $(document.body).trigger("sticky_kit:recalc");
             });
         </script>
         <style>
             .feed,.sidebar-left,.sidebar-right { display:inline-block;}
-            .row {max-width:1360px;}
+            .row {max-width:1360px;background:#eee;}
 
             /* Slide 1 */
             #slide-1 { height:600px;}
@@ -311,6 +345,25 @@
             .top-bar-section ul li {
                 background: transparent;
             }
-        </style>
+            .snap-drawer-left {
+                background: #333;
+                color: #eee;
+            }
+            .snap-drawer ul {
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+            .snap-drawer li > a {
+                display: block;
+                border-bottom: 1px solid rgba(0,0,0, 0.1);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 15px;
+                font-weight: bold;
+                text-shadow: 0 1px 0 #000;
+                text-decoration: none;
+                color: #ccc;
+                text-indent: 20px;
+            }
     </body>
 </html>
