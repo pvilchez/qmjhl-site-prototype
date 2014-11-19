@@ -514,7 +514,9 @@
   <script>
       $( document ).ready(function() {
           $(".preloaded .feed").stick_in_parent();
-          $(".preloaded .sidebar-left").stick_in_parent();
+          $(".preloaded .sidebar-left").stick_in_parent({
+              offset_top: $('.top-bar').height()
+          });
 
           //From https://github.com/leafo/sticky-kit/issues/31#issuecomment-51740033
           //Fixes stickyness issue when new content added
@@ -525,7 +527,9 @@
           .on('sticky_kit:unbottom', function(e) {
               $(this).parent().css('position', 'relative');
           })
-          $(".preloaded .sidebar-right").stick_in_parent();
+          $(".preloaded .sidebar-right").stick_in_parent({
+              offset_top: $('.top-bar').height()
+          });
           $('.preloaded .sidebar-right')
           .on('sticky_kit:bottom', function(e) {
               $(this).parent().css('position', 'static');
