@@ -258,7 +258,7 @@
                 });
             });
 var snapper = new Snap({
-  element: document.getElementById('content')
+  element: document.getElementById('content'), maxPosition:250
 });
             $("#hamburger").click(function(){
                 if( snapper.state().state=="left" ){
@@ -331,24 +331,8 @@ var snapper = new Snap({
                 background: transparent;
             }
             .snap-drawer-left {
-                background: #333;
+                background: #eee;
                 color: #eee;
-            }
-            .snap-drawer ul {
-                padding: 0;
-                margin: 0;
-                list-style-type: none;
-            }
-            .snap-drawer li > a {
-                display: block;
-                border-bottom: 1px solid rgba(0,0,0, 0.1);
-                border-top: 1px solid rgba(255, 255, 255, 0.1);
-                padding: 15px;
-                font-weight: bold;
-                text-shadow: 0 1px 0 #000;
-                text-decoration: none;
-                color: #ccc;
-                text-indent: 20px;
             }
             #content { overflow-x:hidden;}
             </style>
