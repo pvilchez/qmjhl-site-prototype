@@ -247,6 +247,13 @@
           $(this).parent().css('position', 'relative');
         });
         $(document).foundation();
+        $(document)
+          .on('open.fndtn.offcanvas', '[data-offcanvas]', function() {
+            $('html').css('overflow', 'hidden');
+          })
+          .on('close.fndtn.offcanvas', '[data-offcanvas]', function() {
+            $('html').css('overflow', 'auto');
+          })
       });
       $( "#loadMore" ).click(function() {
         $("div.row.hide").removeClass("hide");
@@ -312,6 +319,10 @@
       }
       .left-off-canvas-menu {
         background: #eee;
+        height: 100vh;
+      }
+      .move-right .exit-off-canvas {
+        background: rgba(0,0,0,0.5);
       }
     </style>
   </body>
