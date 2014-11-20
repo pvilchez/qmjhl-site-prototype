@@ -8,28 +8,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/css/foundation.min.css">
-        <link rel="stylesheet" href="css/snap.css">
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.offcanvas.min.js"></script>
         <script src="https://rawgit.com/leafo/sticky-kit/v1.1.0/jquery.sticky-kit.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/snap.js/1.9.2/snap.min.js"></script>
-
     </head>
     <body>
-<div class="snap-drawers">
-            <div class="snap-drawer snap-drawer-left">
-                <div>
-                    <img src="mockup-images/nav-hamburger.png" />
-                </div>
-            </div>
-            <div class="snap-drawer snap-drawer-right"></div>
-        </div>
-<div class="snap-content" id="content">
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <aside class="left-off-canvas-menu">
+    <img src="mockup-images/nav-hamburger.png"/>
+    </aside>
+
+    <section class="main-section">
     <div class="fixed">
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="menu"style="height:55px;margin:0 5px;">
-        <a id="hamburger" href="#"><img src="mockup-images/nav-hamurger.png" style="max-height:55px;"></a>
+        <a class="left-off-canvas-toggle" id="hamburger" href="#"><img src="mockup-images/nav-hamurger.png" style="max-height:55px;"></a>
         </li>
       </ul>
 
@@ -240,8 +237,14 @@
                 <a class="button expand" id="loadMore" style="padding-top:10px;">LOAD MORE</a>
             </div>
         </div>
+ 
+    </section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
 </div>
-        <script>
+       <script>
             $( document ).ready(function() {
                 $(".preloaded .sidebar-left, .preloaded .sidebar-right").stick_in_parent({
                     parent: $(".preloaded.row")
@@ -255,17 +258,8 @@
                 })
                 .on('sticky_kit:unbottom', function(e) {
                     $(this).parent().css('position', 'relative');
-                });
-            });
-var snapper = new Snap({
-  element: document.getElementById('content'), maxPosition:250
-});
-            $("#hamburger").click(function(){
-                if( snapper.state().state=="left" ){
-                    snapper.close();
-                } else {
-                    snapper.open('left');
-                }
+                  });
+                  $(document).foundation();
             });
             $( "#loadMore" ).click(function() {
                 $("div.row.hide").removeClass("hide");
@@ -329,12 +323,10 @@ var snapper = new Snap({
             }
             .top-bar-section ul li {
                 background: transparent;
-            }
-            .snap-drawer-left {
+              }
+              .left-off-canvas-menu {
                 background: #eee;
-                color: #eee;
-            }
-            #content { overflow:initial;}
+              }
             </style>
     </body>
 </html>
