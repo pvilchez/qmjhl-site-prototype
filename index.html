@@ -270,8 +270,8 @@ var snapper = new Snap({
             $( "#loadMore" ).click(function() {
                 $("div.row.hide").removeClass("hide");
                 $("#loadMore").addClass("hide");
-                $(document.body).trigger("sticky_kit:recalc");
                 $(".loaded .sidebar-left, .loaded .sidebar-right").stick_in_parent();
+                $(document.body).trigger("sticky_kit:recalc");
                 // Init Skrollr
                 var s = skrollr.init();
                 // Refresh Skrollr after resizing our sections
