@@ -23,7 +23,9 @@
 
         <section class="main-section">
           <div class="fixed">
-            <img src="mockup-images/scoreboard.png" />
+            <div class="row">
+              <img src="mockup-images/scoreboard.png" />
+            </div>
             <nav class="top-bar" data-topbar role="navigation">
               <ul class="title-area">
                 <li class="menu"style="height:55px;margin:0 5px;">
@@ -41,7 +43,7 @@
               </section>
             </nav>
           </div>
-          <div class="preloaded row" style="padding-top:155px;">
+          <div class="preloaded row" style="padding-top:145px;">
             <div class="row">
               <p><img src="mockup-images/wide-ad970x90.png" style="display:block;margin:0 auto;"/></p>
             </div>
@@ -245,8 +247,9 @@
    <script>
       $( document ).ready(function() {
         $(".preloaded .sidebar-left, .preloaded .sidebar-right").stick_in_parent({
-          parent: $(".preloaded.row")
-        });
+          parent: $(".preloaded.row"),
+          offset_top:120
+        })
 
         //From https://github.com/leafo/sticky-kit/issues/31#issuecomment-51740033
         //Fixes stickyness issue when new content added
@@ -261,15 +264,22 @@
         $(document)
           .on('open.fndtn.offcanvas', '[data-offcanvas]', function() {
             $('html').css('overflow', 'hidden');
+            $('.left-off-canvas-menu').css('height','100vh');
+            $('.left-off-canvas-menu').css('top',$(window).scrollTop());
+            $('.fixed').css('top',$(window).scrollTop());
+            $(document.body).trigger("sticky_kit:recalc");
           })
           .on('close.fndtn.offcanvas', '[data-offcanvas]', function() {
+            $('.fixed').css('top', 0);
+            $(document.body).trigger("sticky_kit:recalc");
             $('html').css('overflow', 'auto');
+            $('left-off-canvas-menu').css('height','initial');
           })
       });
       $( "#loadMore" ).click(function() {
         $("div.row.hide").removeClass("hide");
         $("#loadMore").addClass("hide");
-        $(".loaded .sidebar-left, .loaded .sidebar-right").stick_in_parent();
+        $(".loaded .sidebar-left, .loaded .sidebar-right").stick_in_parent({offset_top:120});
         $(document.body).trigger("sticky_kit:recalc");
         // Init Skrollr
         var s = skrollr.init();
@@ -330,13 +340,12 @@
       }
       .left-off-canvas-menu {
         background: #eee;
-        height: 100vh;
-        position: absolute;
-        top:0;
       }
       .move-right .exit-off-canvas {
         background: rgba(0,0,0,0.5);
       }
+      .large-3 { width:320px;}
+      .large-6 { width:640px;}
     </style>
   </body>
 </html>
