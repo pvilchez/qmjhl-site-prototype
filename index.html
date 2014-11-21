@@ -171,17 +171,25 @@
             $('.left-off-canvas-menu').css('top',$(window).scrollTop());
             $('.fixed').css('top',$(window).scrollTop());
             $(document.body).trigger("sticky_kit:recalc");
+            /*
+            var orig_top = $('.sidebar-left').css('top');
+            orig_top = orig_top.substring(0, orig_top.length - 2);
+            orig_top = parseInt(orig_top) + $(window).scrollTop();
+            console.log(orig_top);
+            $('.sidebar-left').css('top', orig_top);
+            $('.sidebar-right').css('top', orig_top);
+            */
           })
           .on('close.fndtn.offcanvas', '[data-offcanvas]', function() {
             $('.fixed').css('top', 0);
+            $('.sidebar-left, .sidebar-right').css('top',0);
             $(document.body).trigger("sticky_kit:recalc");
             $('html').css('overflow', 'auto');
             $('left-off-canvas-menu').css('height','initial');
           })
-      });
-      //hack todo fixme gross
-      $(".inner-wrap").scroll(function(){
-        $(document.body).trigger("sticky_kit:recalc");
+          $(window).scroll(function(){
+            $(document.body).trigger("sticky_kit:recalc");
+          });
       });
     </script>
     <style>
