@@ -11,6 +11,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.offcanvas.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.interchange.min.js"></script>
     <script src="https://rawgit.com/leafo/sticky-kit/v1.1.0/jquery.sticky-kit.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
   </head>
@@ -45,7 +46,9 @@
                 </nav>
             </div>
         </div>
-          <div class="preloaded row" style="padding-top:145px;">
+        <div class="preloaded row" style="padding-top:145px;">
+            <div data-interchange="[test.html, (small)]">
+            </div>
             <div class="row">
               <p><img src="mockup-images/wide-ad970x90.png" style="display:block;margin:0 auto;"/></p>
             </div>
@@ -267,21 +270,13 @@
             open_method: 'overlap_single'
           }
         });
+        $(document).foundation();
         $(document)
           .on('open.fndtn.offcanvas', '[data-offcanvas]', function() {
             $('html').css('overflow', 'hidden');
             $('.left-off-canvas-menu').css('height','100vh');
             $('.left-off-canvas-menu').css('top',$(window).scrollTop());
-            $('.fixed').css('top',$(window).scrollTop());
             $(document.body).trigger("sticky_kit:recalc");
-            /*
-            var orig_top = $('.sidebar-left').css('top');
-            orig_top = orig_top.substring(0, orig_top.length - 2);
-            orig_top = parseInt(orig_top) + $(window).scrollTop();
-            console.log(orig_top);
-            $('.sidebar-left').css('top', orig_top);
-            $('.sidebar-right').css('top', orig_top);
-            */
           })
           .on('close.fndtn.offcanvas', '[data-offcanvas]', function() {
             $('.fixed').css('top', 0);
