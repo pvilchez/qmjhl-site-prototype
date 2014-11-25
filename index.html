@@ -262,7 +262,11 @@
         .on('sticky_kit:unbottom', function(e) {
           $(this).parent().css('position', 'relative');
         });
-        $(document).foundation();
+        $(document).foundation({
+          offcanvas : {
+            open_method: 'overlap_single'
+          }
+        });
         $(document)
           .on('open.fndtn.offcanvas', '[data-offcanvas]', function() {
             $('html').css('overflow', 'hidden');
