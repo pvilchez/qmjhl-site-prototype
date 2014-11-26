@@ -1,7 +1,6 @@
       .feed,.sidebar-left,.sidebar-right { display:inline-block;}
-      .row {max-width:1360px;background:#eee;}
+      .row {background:#eee;}
       .fixed_wrapper {background: #eeeeee; }
-      .main-section{ min-width: 1360px; }
       .fixed {
           min-width: 1360px;
           max-width: 9999px;
