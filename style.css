@@ -1,0 +1,65 @@
+      .feed,.sidebar-left,.sidebar-right { display:inline-block;}
+      .row {max-width:1360px;background:#eee;}
+      .fixed_wrapper {background: #eeeeee; }
+      .main-section{ min-width: 1360px; }
+      .fixed {
+          min-width: 1360px;
+          max-width: 9999px;
+      }
+
+      /* Slide 1 */
+      #slide-1 { height:600px;}
+      #slide-1 .bcg {
+        background-image:url("mockup-images/Wallpaper-l-040.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+      }
+      #slide-1 .hsContent {
+        bottom: 200px;
+        top: auto;
+      }
+      .hsContent {
+        max-width: 700px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+      }
+      .hsContent h2  {
+        color: #fff8de;
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px 5px;
+        font-size: 35px;
+        line-height: 38px;
+        margin-bottom: 12px;
+      }
+      body {background-color:#eeeeee;}
+      .top-bar {height: 55px;background: #002B56 url("mockup-images/nav-centrelinks.png") no-repeat 50% center;}
+      .top-bar-section li:not(.has-form) a:not(.button) {
+        padding: 0 15px;
+        line-height: 45px;
+        background: transparent;
+      }
+      .top-bar-section li:not(.has-form) a:not(.button):hover {
+        background-color: transparent;
+        background: transparent;
+      }
+      .top-bar-section ul li {
+        background: transparent;
+      }
+      .top-bar-section ul.left {
+          position:absolute;
+          top: -15px;
+      }
+      .left-off-canvas-menu {
+        background: #eee;
+      }
+      .move-right .exit-off-canvas {
+        background: rgba(0,0,0,0.5);
+      }
+      .large-3 { width:320px;margin-bottom:10px;}
+      .large-6 { width:640px;margin-bottom:10px;}
+ 
