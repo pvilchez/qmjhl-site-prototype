@@ -7,17 +7,15 @@ $( document ).ready(function() {
     $(document).foundation();
     $(document)
       .on('open.fndtn.offcanvas', '[data-offcanvas]', function() {
-        $('html').css('overflow', 'hidden');
-        $('.left-off-canvas-menu').css('height','100vh');
-        $('.left-off-canvas-menu').css('top',$(window).scrollTop());
+        $('.left-off-canvas-menu').css('position','fixed');
+        $('.left-off-canvas-menu').css('top', $('.fixed_wrapper').height());
+        $('.left-off-canvas-menu').css('height',$(window).height()-$('.fixed_wrapper').height());
+        $('.left-off-canvas-menu').css('box-shadow','5px 0px 5px #888888');
         $(document.body).trigger("sticky_kit:recalc");
       })
       .on('close.fndtn.offcanvas', '[data-offcanvas]', function() {
-        $('.fixed').css('top', 0);
-        $('.sidebar-left, .sidebar-right').css('top',0);
+          window.setTimeout(function(){$('.left-off-canvas-menu').attr('style','')}, 500);
         $(document.body).trigger("sticky_kit:recalc");
-        $('html').css('overflow', 'auto');
-        $('left-off-canvas-menu').css('height','initial');
       })
       $(window).scroll(function(){
         $(document.body).trigger("sticky_kit:recalc");

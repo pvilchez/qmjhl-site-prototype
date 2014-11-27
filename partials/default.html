@@ -39,6 +39,7 @@
 
 <script>
     $(document).foundation();
-    $(".sticky_column").stick_in_parent({offset_top:100});
+    $(".panel .sticky_column").stick_in_parent({offset_top:100});
+    $(document.body).trigger("sticky_kit:recalc");
 </script>
 

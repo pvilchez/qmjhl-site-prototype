@@ -1,6 +1,7 @@
       .feed,.sidebar-left,.sidebar-right { display:inline-block;}
       .row {background:#eee;max-width:none;}
-      .fixed_wrapper {background: #eeeeee; }
+      .fixed { z-index:9999;}
+      .fixed_wrapper {background: #eeeeee; box-shadow: 0px 5px 5px #888888;}
 
       /* Slide 1 */
       #slide-1 { height:600px;}
@@ -53,6 +54,6 @@
         background: #eee;
       }
       .offcanvas-overlap-right .exit-off-canvas {
-        background: rgba(0,0,0,0.5);
+        background: none;
       }
  

@@ -25,14 +25,16 @@
                 </div>
                 <nav class="top-bar" data-topbar role="navigation">
                 <ul class="title-area">
-                    <li class="menu"style="height:55px;margin:0 5px;">
-                    <a class="left-off-canvas-toggle" id="hamburger" href="#"><img src="mockup-images/nav-hamurger.png" style="max-height:55px;"></a>
+                    <li class="menu"style="height:55px; width:55px;margin:0 5px;">
+                    <a class="left-off-canvas-toggle" id="hamburger" href="#">
+                        <span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>
+                    </a>
                     </li>
                 </ul>
 
                 <section class="top-bar-section">
                 <!-- Left Nav Section -->
-                <ul class="left">
+                <ul>
                     <li>
                     <a href="#"><img src="mockup-images/nav-q-logo.png"></a>
                     </li>
@@ -50,21 +52,36 @@
           </div>
 
        </section>
-
+<!--
        <a class="exit-off-canvas"></a>
-
+       -->
      </div>
    </div>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.tab.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.equalizer.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.offcanvas.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.interchange.min.js"></script>
-    <script src="https://rawgit.com/leafo/sticky-kit/v1.1.0/jquery.sticky-kit.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
+    <script src="https://rawgit.com/leafo/sticky-kit/v1.1.1/jquery.sticky-kit.min.js"></script>
     <script src="script.js"></script>
+    <script src="svgicons-config.js"></script>
+    <script src="svgicons.js"></script>
+    <script>
+            (function() {
+                // initialize all
+                [].slice.call( document.querySelectorAll( '.si-icons-default > .si-icon' ) ).forEach( function( el ) {
+                    var svgicon = new svgIcon( el, svgIconConfig );
+                } );
+                new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { 
+                    speed : 200, // animation speed
+                        easing : mina.linear, // animation esing
+                                size : { w : 55, h : 55 }, // size
+                } );
+            })();
+    </script>
   </body>
 </html>
 
