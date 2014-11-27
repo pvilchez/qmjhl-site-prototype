@@ -1,5 +1,5 @@
       .feed,.sidebar-left,.sidebar-right { display:inline-block;}
-      .row {background:#eee;}
+      .row {background:#eee;max-width:none;}
       .fixed_wrapper {background: #eeeeee; }
 
       /* Slide 1 */
