@@ -52,7 +52,7 @@
       .left-off-canvas-menu {
         background: #eee;
       }
-      .move-right .exit-off-canvas {
+      .offcanvas-overlap-right .exit-off-canvas {
         background: rgba(0,0,0,0.5);
       }
  
