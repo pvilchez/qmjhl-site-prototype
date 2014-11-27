@@ -39,6 +39,7 @@
       img.logo {margin-top:-14px;}
       @media only screen and (max-width: 40em) {
           .top-bar {background:#002B56;}
+          .top-bar-section { width:60px; margin:0 auto;}
           .preloaded.row {padding-top:65px;}
           img.logo {
               position: relative;
