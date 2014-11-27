@@ -10,7 +10,6 @@ $( document ).ready(function() {
         $('.left-off-canvas-menu').css('position','fixed');
         $('.left-off-canvas-menu').css('top', $('.fixed_wrapper').height());
         $('.left-off-canvas-menu').css('height',$(window).height()-$('.fixed_wrapper').height());
-        $('.left-off-canvas-menu').css('box-shadow','5px 0px 5px #888888');
         $(document.body).trigger("sticky_kit:recalc");
       })
       .on('close.fndtn.offcanvas', '[data-offcanvas]', function() {
