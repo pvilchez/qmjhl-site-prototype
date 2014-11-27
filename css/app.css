@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700italic,700);
+body, p,a, h5,h6 {
+
+font-family: 'Open Sans' !important;
+
+}
+
++mixin header(size = 700)
+  font-family: 'Roboto Slab' !important
+  font-weight: size
+  color: #333
+  font-style: bold
+  line-height: 1
+
+h1, h2, h3, h4
+  +header(300)
+  background-color: $brand-success
+ 
++headings(1, 4)
+  
+
+
+h1,h2,h3,h4 {
+
+	font-family: 'Roboto Slab' !important;
+	font-weight: 700;
+	color: #333333;
+	font-style: bold;
+	line-height: 1;
+}
+
+.panel {
+	background: #FFFFFF;
+
+}
+
+.th {
+
+
+}
+
+.light {
+	font-style: normal;
+	font-weight: 300;
+	color: #737373;
+}
+
+.small {
+
+	font-size: 0.9em;
+}
+
+.row {
+	max-width: 1440px;
+	margin-bottom: 20px!important;
+}
