@@ -38,11 +38,12 @@
       }
       .tabs dd { text-align: center; }
       body {background-color:#eeeeee;}
-      .top-bar {height: 55px;background: #002B56 url("mockup-images/nav-centrelinks.png") no-repeat 50% center;}
+      .top-bar {height: 55px;background: #002B56; }
       .preloaded.row {padding-top:145px;}
       @media only screen and (max-width: 40em) {
           .top-bar {background:#002B56;}
-          .tgop-bar-section { width:60px; margin:0 auto;}
+          .top-bar-section { width:60px; margin:0 auto;}
+          .tab-bar-section { display: none; }
           .preloaded.row {padding-top:65px;}
           img.logo {
               position: relative;
@@ -54,7 +55,7 @@
       }
       .top-bar-section li:not(.has-form) a:not(.button) {
         padding: 0 15px;
-        line-height: 45px;
+        line-height: 55px;
         background: transparent;
       }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
@@ -67,6 +68,14 @@
       .top-bar-section ul.left {
           position:absolute;
           top: -15px;
+      }
+      .tab-bar-section ul {
+        display: inline-block;
+        margin: 0 auto;
+      }
+      .tab-bar-section ul li>a{
+        font-size: 1rem;
+        font-weight: bold;
       }
       .left-off-canvas-menu {
         background: #eee;
