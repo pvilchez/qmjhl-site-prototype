@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/css/foundation.min.css">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.offcanvas.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.interchange.min.js"></script>
-    <script src="https://rawgit.com/leafo/sticky-kit/v1.1.0/jquery.sticky-kit.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
+    <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
     <div class="off-canvas-wrap" data-offcanvas>
@@ -25,345 +20,68 @@
         <section class="main-section">
         <div class="fixed">
             <div class="fixed_wrapper">
-                <div class="row">
-                    <img src="mockup-images/scoreboard.png" />
-                </div>
                 <nav class="top-bar" data-topbar role="navigation">
                 <ul class="title-area">
-                    <li class="menu"style="height:55px;margin:0 5px;">
-                    <a class="left-off-canvas-toggle" id="hamburger" href="#"><img src="mockup-images/nav-hamurger.png" style="max-height:55px;"></a>
+                    <li class="menu"style="height:55px; width:55px;margin:0 5px;">
+                    <a class="left-off-canvas-toggle" id="hamburger" href="#">
+                        <span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>
+                    </a>
                     </li>
                 </ul>
 
                 <section class="top-bar-section">
                 <!-- Left Nav Section -->
-                <ul class="left">
+                <ul>
                     <li>
-                    <a href="#"><img src="mockup-images/nav-q-logo.png"></a>
+                    <a href="#">
+                        <img class="logo" src="svg/qmjhl_logo.svg">
+                    </a>
                     </li>
                 </ul>
                 </section>
                 </nav>
             </div>
         </div>
-        <div class="preloaded row" style="padding-top:145px;">
+        <div class="preloaded row">
             <div class="row">
               <p><img src="mockup-images/wide-ad970x90.png" style="display:block;margin:0 auto;"/></p>
             </div>
-
-            <div class="large-3 columns sidebar-left">
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-standings-5.png" />
-                </div>
-              </div>
-            </div>
-
-            <div class="large-6 columns feed">
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-feature.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-gallery.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-gameroundup.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-gallery.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-normal.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-poll.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-video.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-feature.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-gallery.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-normal.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-video.png" />
-                </div>
-              </div>
-            </div>
-
-            <div class="large-3 columns hide-for-small sidebar-right">
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/long-ad.jpg" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-playerspotlight.png" />
-                </div>
-              </div>
-            </div>
-
-            <div class="row"></div>
-
-          </div>
-
-          <div class="loaded-ad row hide" style="padding-top:55px;width:100%;">
-            <div class="large-12 columns">
-              <section id="slide-1" class="homeSlide">
-                <div class="bcg"
-                    data-center="background-position: 50% 0px;"
-                    data-top-bottom="background-position: 50% -100px;"
-                    data-anchor-target="#slide-1"
-                    >
-                  <div class="hsContainer">
-                    <div class="hsContent"
-                      data-center="bottom: 200px; opacity: 1"
-                      data-top="bottom: 1200px; opacity: 0"
-                      data-anchor-target="#slide-1 h2"
-                      >
-                        <h2>Buy this car...</h2>
-                    </div>
-                  </div>
-                </div>
-              </section>
+            <div data-interchange="[partials/tabs.html, (small)], [partials/default.html,(medium)]">
             </div>
           </div>
 
-          <div class="loaded row hide" style="padding-top:55px;">
-            <div class="large-3 columns sidebar-left">
-              <div class="panel">
-                <a href="#"><img src="http://placehold.it/300x240&text=[img]"/></a>
-                <h5><a href="#">Your Name</a></h5>
-                <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
-                  <section class="section">
-                    <h5 class="title"><a href="#">Section 1</a></h5>
-                  </section>
-                  <section class="section">
-                    <h5 class="title"><a href="#">Section 2</a></h5>
-                  </section>
-                  <section class="section">
-                    <h5 class="title"><a href="#">Section 3</a></h5>
-                  </section>
-                  <section class="section">
-                    <h5 class="title"><a href="#">Section 4</a></h5>
-                  </section>
-                  <section class="section">
-                    <h5 class="title"><a href="#">Section 5</a></h5>
-                  </section>
-                  <section class="section">
-                    <h5 class="title"><a href="#">Section 6</a></h5>
-                  </section>
-                </div>
-              </div>
-            </div>
-
-            <div class="large-6 columns feed">
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-feature.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-gallery.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-normal.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-video.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-feature.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-gallery.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-normal.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/card-article-video.png" />
-                </div>
-              </div>
-            </div>
-
-            <aside class="large-3 columns hide-for-small sidebar-right">
-              <div class="row">
-                <div class="large-12 columns">
-                  <img src="mockup-images/long-ad.jpg" />
-                </div>
-              </div>
-            </aside>
-
-          </div>
-          <div class="row hide">
-            <div class="large-12 columns">
-              <a class="button expand" id="loadMore" style="margin-top:10px;">LOAD MORE</a>
-            </div>
-          </div>
        </section>
-
        <a class="exit-off-canvas"></a>
-
      </div>
    </div>
-   <script>
-      $( document ).ready(function() {
-        $(".preloaded .sidebar-left, .preloaded .sidebar-right").stick_in_parent({
-          parent: $(".preloaded.row"),
-          offset_top:120
-        })
-
-        //From https://github.com/leafo/sticky-kit/issues/31#issuecomment-51740033
-        //Fixes stickyness issue when new content added
-        $('.preloaded .sidebar-left, .preloaded .sidebar-right')
-        .on('sticky_kit:bottom', function(e) {
-          $(this).parent().css('position', 'static');
-        })
-        .on('sticky_kit:unbottom', function(e) {
-          $(this).parent().css('position', 'relative');
-        });
-        $(document).foundation({
-          offcanvas : {
-            open_method: 'overlap_single'
-          }
-        });
-        $(document).foundation();
-        $(document)
-          .on('open.fndtn.offcanvas', '[data-offcanvas]', function() {
-            $('html').css('overflow', 'hidden');
-            $('.left-off-canvas-menu').css('height','100vh');
-            $('.left-off-canvas-menu').css('top',$(window).scrollTop());
-            $(document.body).trigger("sticky_kit:recalc");
-          })
-          .on('close.fndtn.offcanvas', '[data-offcanvas]', function() {
-            $('.fixed').css('top', 0);
-            $('.sidebar-left, .sidebar-right').css('top',0);
-            $(document.body).trigger("sticky_kit:recalc");
-            $('html').css('overflow', 'auto');
-            $('left-off-canvas-menu').css('height','initial');
-          })
-          $(window).scroll(function(){
-            $(document.body).trigger("sticky_kit:recalc");
-          });
-      });
-      $( "#loadMore" ).click(function() {
-        $("div.row.hide").removeClass("hide");
-        $("#loadMore").addClass("hide");
-        $(".loaded .sidebar-left, .loaded .sidebar-right").stick_in_parent({offset_top:120});
-        $(document.body).trigger("sticky_kit:recalc");
-        // Init Skrollr
-        var s = skrollr.init();
-        // Refresh Skrollr after resizing our sections
-        s.refresh($('.homeSlide'));
-      });
-      //hack todo fixme gross
-    </script>
-    <style>
-      .feed,.sidebar-left,.sidebar-right { display:inline-block;}
-      .row {max-width:1360px;background:#eee;}
-      .fixed_wrapper {background: #eeeeee; }
-      .main-section{ min-width: 1360px; }
-      .fixed {
-          min-width: 1360px;
-          max-width: 9999px;
-      }
-
-      /* Slide 1 */
-      #slide-1 { height:600px;}
-      #slide-1 .bcg {
-        background-image:url("mockup-images/Wallpaper-l-040.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        height: 100%;
-        width: 100%;
-      }
-      #slide-1 .hsContent {
-        bottom: 200px;
-        top: auto;
-      }
-      .hsContent {
-        max-width: 700px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-      }
-      .hsContent h2  {
-        color: #fff8de;
-        background-color: rgba(0,0,0,0.5);
-        padding: 10px 5px;
-        font-size: 35px;
-        line-height: 38px;
-        margin-bottom: 12px;
-      }
-      body {background-color:#eeeeee;}
-      .top-bar {height: 55px;background: #002B56 url("mockup-images/nav-centrelinks.png") no-repeat 50% center;}
-      .top-bar-section li:not(.has-form) a:not(.button) {
-        padding: 0 15px;
-        line-height: 45px;
-        background: transparent;
-      }
-      .top-bar-section li:not(.has-form) a:not(.button):hover {
-        background-color: transparent;
-        background: transparent;
-      }
-      .top-bar-section ul li {
-        background: transparent;
-      }
-      .top-bar-section ul.left {
-          position:absolute;
-          top: -15px;
-      }
-      .left-off-canvas-menu {
-        background: #eee;
-      }
-      .move-right .exit-off-canvas {
-        background: rgba(0,0,0,0.5);
-      }
-      .large-3 { width:320px;margin-bottom:10px;}
-      .large-6 { width:640px;margin-bottom:10px;}
-    </style>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.tab.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.equalizer.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.offcanvas.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.interchange.min.js"></script>
+    <script src="https://rawgit.com/leafo/sticky-kit/v1.1.1/jquery.sticky-kit.min.js"></script>
+    <script src="script.js"></script>
+    <script src="svgicons-config.js"></script>
+    <script src="svgicons.js"></script>
+    <script>
+            (function() {
+                // initialize all
+                [].slice.call( document.querySelectorAll( '.si-icons-default > .si-icon' ) ).forEach( function( el ) {
+                    var svgicon = new svgIcon( el, svgIconConfig );
+                } );
+                new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { 
+                    speed : 200, // animation speed
+                        easing : mina.linear, // animation esing
+                                size : { w : 30, h : 55 }, // size
+                } );
+            })();
+        </script>
+        <style>
+            .si-icon-hamburger-cross svg { display:block; margin:0 auto;}
+        </style>
   </body>
 </html>
+

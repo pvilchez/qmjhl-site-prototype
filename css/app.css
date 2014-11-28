@@ -1,24 +1,97 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+     @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700italic,700);
+
+      .feed,.sidebar-left,.sidebar-right { display:inline-block;}
+      .row {background:#eee;max-width:none;}
+      .fixed { z-index:9999;}
+      .fixed_wrapper {background: #eeeeee; box-shadow: 0px 3px 5px rgba(0,0,0,0.25);}
+
+      /* Slide 1 */
+      #slide-1 { height:600px;}
+      #slide-1 .bcg {
+        background-image:url("mockup-images/Wallpaper-l-040.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+      }
+      #slide-1 .hsContent {
+        bottom: 200px;
+        top: auto;
+      }
+      .hsContent {
+        max-width: 700px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+      }
+      .hsContent h2  {
+        color: #fff8de;
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px 5px;
+        font-size: 35px;
+        line-height: 38px;
+        margin-bottom: 12px;
+      }
+      .tabs dd { text-align: center; }
+      body {background-color:#eeeeee;}
+      .top-bar {height: 55px;background: #002B56 url("mockup-images/nav-centrelinks.png") no-repeat 50% center;}
+      .preloaded.row {padding-top:145px;}
+      @media only screen and (max-width: 40em) {
+          .top-bar {background:#002B56;}
+          .tgop-bar-section { width:60px; margin:0 auto;}
+          .preloaded.row {padding-top:65px;}
+          img.logo {
+              position: relative;
+              margin: 0 auto;
+              margin-top: -45px;
+              display: block;
+              height: 36px;
+          }
+      }
+      .top-bar-section li:not(.has-form) a:not(.button) {
+        padding: 0 15px;
+        line-height: 45px;
+        background: transparent;
+      }
+      .top-bar-section li:not(.has-form) a:not(.button):hover {
+        background-color: transparent;
+        background: transparent;
+      }
+      .top-bar-section ul li {
+        background: transparent;
+      }
+      .top-bar-section ul.left {
+          position:absolute;
+          top: -15px;
+      }
+      .left-off-canvas-menu {
+        background: #eee;
+      }
+      .offcanvas-overlap-right .exit-off-canvas {
+        background: rgba(0,0,0,.6);
+      }
+      .offcanvas-overlap-right .exit-off-canvas:hover {
+          background: rgba(0,0,0,0.3);
+      }
+
+ 
+/*most of the card styling */
+
+
+
+
+
+
+
+
 body, p,a, h5,h6 {
 
 font-family: 'Open Sans' !important;
 
 }
-
-+mixin header(size = 700)
-  font-family: 'Roboto Slab' !important
-  font-weight: size
-  color: #333
-  font-style: bold
-  line-height: 1
-
-h1, h2, h3, h4
-  +header(300)
-  background-color: $brand-success
- 
-+headings(1, 4)
-  
 
 
 h1,h2,h3,h4 {
@@ -55,3 +128,6 @@ h1,h2,h3,h4 {
 	max-width: 1440px;
 	margin-bottom: 20px!important;
 }
+
+
+
