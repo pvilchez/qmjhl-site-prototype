@@ -36,7 +36,6 @@
       body {background-color:#eeeeee;}
       .top-bar {height: 55px;background: #002B56 url("mockup-images/nav-centrelinks.png") no-repeat 50% center;}
       .preloaded.row {padding-top:145px;}
-      img.logo {margin-top:-14px;}
       @media only screen and (max-width: 40em) {
           .top-bar {background:#002B56;}
           .top-bar-section { width:60px; margin:0 auto;}
