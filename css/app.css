@@ -87,7 +87,22 @@
           background: rgba(0,0,0,0.3);
       }
 
- 
+
+/*HAMBURGER*/
+ul.off-canvas-list li label {
+background: #eee;
+border-top: none;
+border-bottom: none;
+}
+ul.off-canvas-list li a {
+color: rgba(0,0,0,0.5);
+font-weight:bold;
+border-bottom: 1px solid #dddddd;
+transition: background 300ms ease;
+}
+ul.off-canvas-list li a:hover {
+background: #dddddd;
+}
 /*most of the card styling */
 
 
