@@ -101,19 +101,28 @@ h1,h2,h3,h4 {
 	color: #333333;
 	font-style: bold;
 	line-height: 1;
+	padding: 0;
 }
 
 .panel {
 	background: #FFFFFF;
+	border: 0;
 
 }
+
+.th:hover {
+	box-shadow: none;
+}
+
 
 .th {
 
-
+	border: 0;
+	padding: 0;
+	box-shadow: none;
 }
 
-.light {
+.panel p.light, .light {
 	font-style: normal;
 	font-weight: 300;
 	color: #737373;
@@ -129,5 +138,14 @@ h1,h2,h3,h4 {
 	margin-bottom: 20px!important;
 }
 
+.advert{
+	background: #e6e6e6;
+
+}
+
+.panel.advert p {
+	text-align: center;
+}	
+}
 
 
