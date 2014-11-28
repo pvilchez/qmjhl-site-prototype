@@ -37,7 +37,7 @@
       }
       .tabs dd { text-align: center; }
       body {background-color:#eeeeee;}
-      .top-bar {height: 55px;background: #002B56 url("../mockup-images/nav-centrelinks.png") no-repeat 50% center;}
+      .top-bar {height: 55px;background: #002B56 url("mockup-images/nav-centrelinks.png") no-repeat 50% center;}
       .preloaded.row {padding-top:145px;}
       @media only screen and (max-width: 40em) {
           .top-bar {background:#002B56;}
@@ -118,7 +118,7 @@ h1,h2,h3,h4 {
 .th {
 
 	border: 0;
-	padding: 0;
+	
 	box-shadow: none;
 	margin-bottom: 10px;
 }
@@ -163,13 +163,40 @@ h1,h2,h3,h4 {
 	font-size: 0.9em;
 
 }
-.panel .columns {
-	padding: 0;
-	margin: 0;
-}
+
 
 ul li {
 	list-style-type: none;
 }
+.roundup .teamlogo {
+
+	width: 3rem;
+}
+.panel .summary h5,.panel .summary h2{
+	line-height: 3rem;
+}
+.scorecard .middle {
+	text-align:center;
+}
+.scorecard .right {
+	text-align: right;
+
+}
+.scorecard.panel.row {
+	padding-top: 0;
+	
+	padding-bottom: 0;
 }
 
+.roundup.panel {
+	position: relative;
+	background: #e6e6e6;
+
+}
+
+.roundup .row.last .row.panel {
+	margin-bottom: 0;
+}
+.roundup p.right {
+	text-align:right;
+}
