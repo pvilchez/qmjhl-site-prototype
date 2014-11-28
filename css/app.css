@@ -120,32 +120,56 @@ h1,h2,h3,h4 {
 	border: 0;
 	padding: 0;
 	box-shadow: none;
+	margin-bottom: 10px;
 }
 
 .panel p.light, .light {
 	font-style: normal;
 	font-weight: 300;
-	color: #737373;
+	color: #737373!important;
 }
 
 .small {
 
-	font-size: 0.9em;
+	font-size: 0.8em;
+}
+.card:hover {
+
+	box-shadow: 0 3px 8px #bfbfbf;
 }
 
-.row {
-	max-width: 1440px;
-	margin-bottom: 20px!important;
+.card {
+		transition: box-shadow 0.2s ease;
 }
+.row.panel {
 
+	margin-bottom: 20px;
+}
+.row.first {
+
+	margin-top: 60px;
+} 
 .advert{
 	background: #e6e6e6;
 
 }
+.panel {
 
+	margin-bottom: 0;
+}
 .panel.advert p {
 	text-align: center;
-}	
+	margin-bottom: 5px;
+	font-size: 0.9em;
+
+}
+.panel .columns {
+	padding: 0;
+	margin: 0;
 }
 
+ul li {
+	list-style-type: none;
+}
+}
 
