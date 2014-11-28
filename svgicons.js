@@ -94,7 +94,7 @@
         var self = this, toggleFn =  function( ev ) {
                 if( ( ( ev.type.toLowerCase() === 'mouseover' || ev.type.toLowerCase() === 'mouseout' ) && isMouseLeaveOrEnter( ev, this ) ) || ev.type.toLowerCase() === self.clickevent ) {
                     self.toggle(true);
-                    self.options.onToggle();    
+                    self.options.onToggle();
                 }
             };
 

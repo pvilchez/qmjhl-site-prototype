@@ -63,25 +63,9 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.offcanvas.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.interchange.min.js"></script>
     <script src="https://rawgit.com/leafo/sticky-kit/v1.1.1/jquery.sticky-kit.min.js"></script>
-    <script src="script.js"></script>
     <script src="svgicons-config.js"></script>
     <script src="svgicons.js"></script>
-    <script>
-            (function() {
-                // initialize all
-                [].slice.call( document.querySelectorAll( '.si-icons-default > .si-icon' ) ).forEach( function( el ) {
-                    var svgicon = new svgIcon( el, svgIconConfig );
-                } );
-                new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { 
-                    speed : 200, // animation speed
-                        easing : mina.linear, // animation esing
-                                size : { w : 30, h : 55 }, // size
-                } );
-            })();
-        </script>
-        <style>
-            .si-icon-hamburger-cross svg { display:block; margin:0 auto;}
-        </style>
+    <script src="script.js"></script>
   </body>
 </html>
 
